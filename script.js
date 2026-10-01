@@ -3,7 +3,7 @@ const escapeHtml = (v) =>
 
 // สร้าง Supabase client เฉพาะหน้าที่โหลดไลบรารีไว้ (order.html, admin.html)
 const db = (window.supabase && typeof SUPABASE_URL !== 'undefined')
-  ? window.supabase.createClient(,)
+  ? window.supabase.createClient(SUPABASE_URL,)
   : null;
 
 document.addEventListener('DOMContentLoaded', () => {
